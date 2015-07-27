@@ -745,7 +745,11 @@ console.log("Running Apos Bot!");
                     for (var i = 0; i < allPossibleThreats.length; i++) {
 
                         var enemyDistance = computeDistance(allPossibleThreats[i].x, allPossibleThreats[i].y, player[k].x, player[k].y);
-
+                        if(enemyDistance <100 && enemydistance > 10){
+                            enemyDistance -= 10;
+                        }
+                        
+                        
                         var splitDangerDistance = allPossibleThreats[i].size + splitDistance + 150;
 
                         var normalDangerDistance = allPossibleThreats[i].size + 150;
